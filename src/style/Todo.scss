@@ -1,0 +1,22 @@
+.todo {
+  display: flex;
+  flex-direction: column;
+  //   padding: 10% 20%;
+  padding: 6rem 12rem;
+  text-align: center;
+
+  &__list {
+    list-style-type: none;
+    padding-bottom: 40px;
+  }
+
+  &__addbar {
+    display: flex;
+    justify-content: center;
+
+    > * {
+      padding: 12px;
+      margin: 0 12px;
+    }
+  }
+}

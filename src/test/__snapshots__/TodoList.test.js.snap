@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoList Component renders correctly 1`] = `ShallowWrapper {}`;
+
+exports[`TodoList renders correctly 1`] = `
+<div
+  className="todo"
+>
+  <h1
+    className="todo__title"
+  >
+     Todo list
+  </h1>
+  <div
+    className="todo__sort"
+  >
+    <div
+      className="todo__sort-date"
+    >
+      date
+    </div>
+    <div
+      className="todo__sort-item"
+      onClick={[Function]}
+    >
+      A-Z
+    </div>
+  </div>
+  <ul
+    className="todo__list"
+  />
+  <div
+    className="todo__addbar"
+  >
+    <input
+      className="todo__addbar-input"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <button
+      className="todo__addbar-button"
+      onClick={[Function]}
+    >
+      Add
+    </button>
+  </div>
+</div>
+`;
