@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import db from '../firebase';
 import TodoItem from './TodoItem';
+import Button from './Button';
+import Input from './Input';
 
 const TodoList = () => {
   const [listData, setListData] = useState([]);
@@ -65,19 +67,8 @@ const TodoList = () => {
       </ul>
 
       <div className='todo__addbar'>
-        <input
-          className='todo__addbar-input'
-          type='text'
-          value={todo}
-          onChange={e => setTodo(e.target.value)}
-        ></input>
-        <button
-          className='todo__addbar-button'
-          id='add-button'
-          onClick={handleAdd}
-        >
-          Add
-        </button>
+        <Input onChange={e => setTodo(e.target.value)} value={todo} />
+        <Button onClick={handleAdd} text={'Add'} />
       </div>
     </div>
   );

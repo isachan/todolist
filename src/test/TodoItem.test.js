@@ -23,17 +23,18 @@ describe('TodoItem Component', () => {
     expect(component).toMatchSnapshot();
   });
 
-  it('clicking on X delete button removes record', () => {
+  it('clicking on X delete button calls function', () => {
+    const onCheck = jest.fn(() => {});
+    const onDelete = jest.fn(() => {});
     const { getByTestId } = render(
-      <TodoItem item={dummyItem} onCheck={() => {}} onDelete={() => {}} />
+      <TodoItem item={dummyItem} onCheck={onCheck} onDelete={onDelete} />
     );
     const deleteButton = getByTestId('delete-button');
-    // console.log('FIRST!!!', deleteButton);
     fireEvent.click(deleteButton);
-    // need to write function to test data from firebase online
-    screen.getByText('X');
+    expect(onDelete).toHaveBeenCalledTimes(1);
 
-    expect(screen.findByText('X').toBeVisible);
-    // console.log('SECONDDD!!!', deleteButton);
+    // need to write function to test data from firebase online
   });
+
+  it('should be checked off when clicking on item', () => {});
 });
